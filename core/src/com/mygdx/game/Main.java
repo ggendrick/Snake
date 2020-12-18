@@ -17,9 +17,8 @@ public class Main extends ApplicationAdapter {
 	Eat eat;
 	Person person;
 	public int score;
-	boolean game;
-	BitmapFont font;
-	boolean snake_plus;
+	private boolean game;
+	private BitmapFont font;
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -31,7 +30,6 @@ public class Main extends ApplicationAdapter {
 		game=true;
 		font = new BitmapFont();
 		font.setColor(Color.WHITE);
-		snake_plus=false;
 	}
 
 	@Override
@@ -51,9 +49,6 @@ public class Main extends ApplicationAdapter {
 			batch.begin();
 			font.draw(batch, Integer.toString(score),5,20);
 			batch.end();
-
-
-
 		}
 		else{
 			batch.begin();
